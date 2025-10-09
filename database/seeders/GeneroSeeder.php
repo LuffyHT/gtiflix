@@ -19,6 +19,10 @@ class GeneroSeeder extends Seeder
             ['nome'=>"Comédia"],
             ['nome'=>"Drama"],
             ['nome'=>"Suspense"],
+            ['nome'=>"Animação"],
+            ['nome'=>"Ação"],
+            ['nome'=>"Ficção Científica"],
+            ['nome'=>"Documentário"],
             
         );
     }
