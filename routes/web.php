@@ -53,3 +53,8 @@ Route::get('/filmes', function() {
     $filmes = Filme::all();
     dd($filmes);
 });
+
+Route::get('/lista-filmes', function() {
+    $filmes = Filme::all();
+    return view('lista-filmes',compact('filmes'));
+});
