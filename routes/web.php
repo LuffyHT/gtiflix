@@ -10,9 +10,9 @@ use App\Models\Produtora;
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+   // return view('welcome');
+//});
 
 Route::get('/chavinho', function(){
     echo 'bibibibibi conta tuda pra sua mae quico';
@@ -54,7 +54,12 @@ Route::get('/filmes', function() {
     dd($filmes);
 });
 
-Route::get('/lista-filmes', function() {
+Route::get('/', function() {
     $filmes = Filme::all();
     return view('lista-filmes',compact('filmes'));
+});
+
+Route::get('/detalhes-filme/{filme}',
+ function(Filme $filme){
+ return view('detalhes-filme', compact('filme'));
 });
